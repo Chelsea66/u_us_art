@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding:0;
+    color:white; 
+    box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
+}
+
+body{
+    background: #f2f2f2;
+}
+nav{
+    background: #1b1b1b;
+}
+nav:after{
+    content:'';
+    clear:both;
+    display: table;
+}
+nav .logo{
+    float:left;
+    color:white; 
+    font-size:27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    
+}
+nav ul{
+    float: right;
+    list-style:none;
+    margin-right: 40px;
+    position: relative;
+}
+nav ul li{
+    float:left;
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white; 
+    text-decoration: none;
+    line-height: 70px;
+    font-size:14px;
+    padding: 8px 18px; 
+}
+nav ul li a:hover{
+    color:cyan; 
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff, 
+                0 0 5px #66ffff
+}
+nav ul ul li a:hover{
+    color: cyan;
+    box-shadow: none;
+}
+nav ul ul{
+    position: absolute; 
+    top:70px;
+    border-top:3px solid cyan;
+    opacity: 0;
+    visibility: hidden; 
+    transition: top .3s;
+}
+nav ul ul ul{
+    border-top:none;
+}
+nav ul li:hover > ul{
+    top:70px;
+    opacity: 1;
+    visibility: visible; 
+}
+
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 230px;
+    float: none;
+    display: list-item; 
+    border-bottom: 1px solid rgba(0,0,0,0,.3);
+    
+}
+nav ul ul li a{
+    line-height: 50px;
+}
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 230px; 
+    
+}
+.fa-plus{
+    margin-left: 40px;
+    font-size: 15px;
+}
+/*RESPONSIVE*/
+.show, .icon,input{
+    display: none;
+    
+}
+
+
+/* MAIN BODY*/
+.intro{
+    display: flex;
+    flex-direction:column; 
+    gap:40px; 
+    align-items: center; 
+}
+
+.box1{
+    display: flex; 
+    flex-direction:column; 
+    width:100%;  
+    margin-top: 70px; 
+}
+.box2{
+    display: flex; 
+    flex-direction:column; 
+    width:100%; 
+    height: 250px;
+    background-image: url("crab_girl.png"); /* The image used */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:contain; 
+}
+
+
+.hello {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 50px; 
+    color: black; 
+    text-align: center;
+}
+.kuniony{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 35px; 
+    color: black; 
+    text-align: center;
+}
+.job{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 12px; 
+    color: black; 
+    text-align: center;
+}
+
+@media all and (max-width:1160px){
+    nav ul{
+        margin:-right:0px;
+        float:left;
+    }
+    nav .logo{
+        padding-left: 30px;
+        width: 100%;
+    }
+    nav ul li, nav ul ul li{
+        display: block;
+        width: 100%; 
+    }
+    nav ul ul {
+        top: 70;
+        position:static;
+        border-top: none; 
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible; 
+    }
+    nav ul ul ul li{
+        position: static;
+    }
+    nav ul ul li{
+        border-bottom: 0px;
+        
+    }
+    nav ul li a{
+        padding: 40px;
+    }
+    .home{
+        padding-left: 20px;
+    }
+    nav ul ul ul a{
+        padding: 80px;
+    }
+    .show{
+        display: block;
+        color:white;
+        font-size: 14px;
+        padding: 0 20px; 
+        line-height: 70px;
+        cursor:pointer;
+    }
+    .show:hover{
+        color:cyan;
+    }
+    .icon{
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 50px;
+        cursor:pointer; 
+    }
+    nav ul li a:hover{
+        box-shadow: none;
+        
+    }
+    .show + a, ul{
+        display: none; 
+    }
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+}
