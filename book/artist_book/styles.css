@@ -143,6 +143,8 @@ nav ul ul ul li{
     font-size: 12px; 
     color: black; 
     text-align: center;
+    margin-left: 10%;
+    margin-right: 10%; 
 }
 .bottom_space{
     height: 100px; 
