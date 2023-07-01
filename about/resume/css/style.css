@@ -17,7 +17,9 @@ body{
 }
 nav{
     background: #1b1b1b;
-    z-index: 4; 
+}
+.munu{
+      z-index: 10; 
 }
 nav:after{
     content:'';
@@ -181,6 +183,7 @@ p{
   margin: 4em auto;
   position: relative;
   max-width: 46em;
+  z-index: -1; 
 }
 .timeline:before {
   background-color: black;
